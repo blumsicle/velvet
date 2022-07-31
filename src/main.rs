@@ -33,7 +33,6 @@ fn model(app: &App) -> Model {
 
     let seed = Utc::now().timestamp() as u32;
     let noise = OpenSimplex::new().set_seed(seed);
-    println!("seed: {}", noise.seed());
 
     for y in (bounds.bottom() as isize..bounds.top() as isize).step_by(12) {
         for x in (bounds.left() as isize..bounds.right() as isize).step_by(12) {
